@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,6 +8,23 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private PlayerLook playerLook;
     [SerializeField] private PlayerMovement playerMovement;
+
+    public GameObject pickUpText;
+
+    [Header("Values")]
+    public static GameManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {

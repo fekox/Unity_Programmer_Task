@@ -9,25 +9,21 @@ public class Item : MonoBehaviour
     [SerializeField] private ItemManager itemMananger;
 
     [SerializeField] private int ID;
-    [SerializeField] private TextMeshProUGUI description;
-    [SerializeField] private TextMeshProUGUI name;
+
+    //TODO: Implemenet the item description and item name.
+    //[SerializeField] private TextMeshProUGUI description;
+    //[SerializeField] private TextMeshProUGUI name;
 
     [Header("Values")]
     [SerializeField] private bool canPickUp;
 
     private ItemSO newItem;
 
-    private void Awake()
-    {
-        newItem = itemMananger.GetRandomItem();
-    }
-
     private void Start()
     {
-        ID = newItem.ID;
-        name.text = newItem.name;
-        description.text = newItem.Description;
+        newItem = itemMananger.GetRandomItem();
 
+        ID = newItem.ID;
         canPickUp = false;
     }
 
@@ -35,7 +31,23 @@ public class Item : MonoBehaviour
     {
         if (other.CompareTag("Player")) 
         {
-            Debug.Log("Collision");
+            if (GameManager.Instance != null && GameManager.Instance.pickUpText != null)
+            {
+                canPickUp = true;
+                GameManager.Instance.pickUpText.SetActive(canPickUp);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (GameManager.Instance != null && GameManager.Instance.pickUpText != null)
+            {
+                canPickUp = false;
+                GameManager.Instance.pickUpText.SetActive(canPickUp);
+            }
         }
     }
 }
