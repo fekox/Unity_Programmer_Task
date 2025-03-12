@@ -31,12 +31,17 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //Cursor.lockState = CursorLockMode.Locked;    
+        Cursor.lockState = CursorLockMode.Locked;    
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         playerLook.LookLogic();
         playerMovement.MovementLogic();
+    }
+
+    private void Update()
+    {
+        playerInventory.ShowInventoryLogic();
     }
 }

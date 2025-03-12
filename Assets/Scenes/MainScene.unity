@@ -446,7 +446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &393012328
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1354,6 +1354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: []
   itemManager: {fileID: 1066766994}
+  playerInventory: {fileID: 393012327}
   maxInventorySize: 3
 --- !u!54 &1494096336
 Rigidbody:

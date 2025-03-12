@@ -7,10 +7,12 @@ public class PlayerInventory : MonoBehaviour
     [Header("References")]
     [SerializeField] private List<ItemSO> inventory;
     [SerializeField] private ItemManager itemManager;
+    [SerializeField] private GameObject playerInventory;
 
     private List<ItemSO> allItems;
 
     private bool isInventoryFull = false;
+    private bool showInventory = false;
 
     [Header("Values")]
     [SerializeField] private int maxInventorySize;
@@ -24,7 +26,6 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddItem(int id) 
     {
-
         if (inventory.Count < maxInventorySize)
         {
             isInventoryFull = false;
@@ -61,5 +62,27 @@ public class PlayerInventory : MonoBehaviour
     public bool GetIsInventoryFull() 
     {
         return isInventoryFull;
+    }
+
+    public void ShowInventoryLogic() 
+    {
+        if(Input.GetKeyDown(KeyCode.Tab)) 
+        {
+            showInventory = !showInventory;
+
+            playerInventory.SetActive(showInventory);
+        }
+
+        if (showInventory == true)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        else 
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }
