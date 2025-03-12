@@ -27,6 +27,8 @@ public class PlayerInventory : MonoBehaviour
 
         if (inventory.Count < maxInventorySize)
         {
+            isInventoryFull = false;
+
             for (int i = 0; i < allItems.Count; i++)
             {
                 if (id == allItems[i].ID)
