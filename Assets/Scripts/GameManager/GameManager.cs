@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private PlayerLook playerLook;
     [SerializeField] private PlayerMovement playerMovement;
-
+    
+    public PlayerInventory playerInventory;
+    public ItemManager itemMananger;
     public GameObject pickUpText;
 
     [Header("Values")]
@@ -20,6 +22,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+
         else
         {
             Destroy(gameObject);

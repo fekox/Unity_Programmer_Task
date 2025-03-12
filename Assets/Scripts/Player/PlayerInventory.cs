@@ -6,6 +6,11 @@ public class PlayerInventory : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private List<ItemSO> inventory;
+    [SerializeField] private ItemManager itemManager;
+
+    private List<ItemSO> allItems;
+
+    private bool isInventoryFull = false;
 
     [Header("Values")]
     [SerializeField] private int maxInventorySize;
@@ -14,15 +19,27 @@ public class PlayerInventory : MonoBehaviour
     {
         inventory = new List<ItemSO>();
 
-        for (int i = 0; i < maxInventorySize; i++) 
-        {
-            inventory.Add(new ItemSO());
-        }
+        allItems = itemManager.GetAllItemsList();
     }
 
-    public void AddItem() 
+    public void AddItem(int id) 
     {
-        inventory.Add(new ItemSO()); 
+
+        if (inventory.Count < maxInventorySize)
+        {
+            for (int i = 0; i < allItems.Count; i++)
+            {
+                if (id == allItems[i].ID)
+                {
+                    inventory.Add(allItems[i]);
+                }
+            }
+        }
+
+        if (inventory.Count >= maxInventorySize)
+        {
+            isInventoryFull = true;
+        }
     }
 
     public void RemoveItem(int ID) 
@@ -37,5 +54,10 @@ public class PlayerInventory : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool GetIsInventoryFull() 
+    {
+        return isInventoryFull;
     }
 }
