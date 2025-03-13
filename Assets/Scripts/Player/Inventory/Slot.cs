@@ -33,4 +33,9 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         isCursorOver = false;
         descriptionSign.SetActive(false);
     }
+
+    public void UpdateSlotData()
+    {
+        
+    }
 }

@@ -17,6 +17,8 @@ public class InventoryUIManager : MonoBehaviour
 
     private List<ItemSO> inventory;
 
+    private int usableslots = 4;
+
     public void UpdateInventoryUI() 
     {
         ResetAllSlotsUI();
@@ -63,7 +65,7 @@ public class InventoryUIManager : MonoBehaviour
 
     public void ResetAllSlotsUI() 
     {
-        for(int i = 0;i < itemSlots.Count; i++) 
+        for(int i = 0;i < usableslots; i++) 
         {
             itemSlots[i].image.sprite = defaultImage;
             itemSlots[i]._name.text = defaultName;
