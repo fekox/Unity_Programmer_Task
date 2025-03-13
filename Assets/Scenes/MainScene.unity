@@ -353,9 +353,33 @@ PrefabInstance:
       value: InventorySlot (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: nameData
+      value: 
+      objectReference: {fileID: 19558895}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: signName
+      value: 
+      objectReference: {fileID: 19558895}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: descriptionData
+      value: 
+      objectReference: {fileID: 1275246600}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
       propertyPath: descriptionSign
       value: 
       objectReference: {fileID: 871177133}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: playerInventory
+      value: 
+      objectReference: {fileID: 1494096335}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: signDescription
+      value: 
+      objectReference: {fileID: 1275246600}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: inventoryUIManager
+      value: 
+      objectReference: {fileID: 1474985219}
     - target: {fileID: 5775191932594315152, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
       propertyPath: _name
       value: 
@@ -715,9 +739,33 @@ PrefabInstance:
       value: InventorySlot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: nameData
+      value: 
+      objectReference: {fileID: 19558895}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: signName
+      value: 
+      objectReference: {fileID: 19558895}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: descriptionData
+      value: 
+      objectReference: {fileID: 1275246600}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
       propertyPath: descriptionSign
       value: 
       objectReference: {fileID: 871177133}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: playerInventory
+      value: 
+      objectReference: {fileID: 1494096335}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: signDescription
+      value: 
+      objectReference: {fileID: 1275246600}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: inventoryUIManager
+      value: 
+      objectReference: {fileID: 1474985219}
     - target: {fileID: 5775191932594315152, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
       propertyPath: _name
       value: 
@@ -3074,9 +3122,33 @@ PrefabInstance:
       value: InventorySlot (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: nameData
+      value: 
+      objectReference: {fileID: 19558895}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: signName
+      value: 
+      objectReference: {fileID: 19558895}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: descriptionData
+      value: 
+      objectReference: {fileID: 1275246600}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
       propertyPath: descriptionSign
       value: 
       objectReference: {fileID: 871177133}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: playerInventory
+      value: 
+      objectReference: {fileID: 1494096335}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: signDescription
+      value: 
+      objectReference: {fileID: 1275246600}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: inventoryUIManager
+      value: 
+      objectReference: {fileID: 1474985219}
     - target: {fileID: 5775191932594315152, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
       propertyPath: _name
       value: 
@@ -3699,9 +3771,33 @@ PrefabInstance:
       value: InventorySlot
       objectReference: {fileID: 0}
     - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: nameData
+      value: 
+      objectReference: {fileID: 19558895}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: signName
+      value: 
+      objectReference: {fileID: 19558895}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: descriptionData
+      value: 
+      objectReference: {fileID: 1275246600}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
       propertyPath: descriptionSign
       value: 
       objectReference: {fileID: 871177133}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: playerInventory
+      value: 
+      objectReference: {fileID: 1494096335}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: signDescription
+      value: 
+      objectReference: {fileID: 1275246600}
+    - target: {fileID: 4935674527714127845, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
+      propertyPath: inventoryUIManager
+      value: 
+      objectReference: {fileID: 1474985219}
     - target: {fileID: 5775191932594315152, guid: c7ff87dbe0fee654fae3ffc13dd18943, type: 3}
       propertyPath: _name
       value: 

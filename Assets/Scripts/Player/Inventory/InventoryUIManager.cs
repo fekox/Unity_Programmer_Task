@@ -37,19 +37,19 @@ public class InventoryUIManager : MonoBehaviour
 
     public void RemoveItemFromInventoryLogic() 
     {
-        if (playerInventory.playerInventoryUI.activeInHierarchy) 
-        {
-            for (int i = 0; i < itemSlots.Count; i++)
-            {
-                if (itemSlots[i].isCursorOver && Input.GetMouseButtonDown(1))
-                {
-                    playerInventory.RemoveItem(itemSlots[i].ID);
-                    ResetSlotUI(itemSlots[i]);
+        //if (playerInventory.playerInventoryUI.activeInHierarchy) 
+        //{
+        //    for (int i = 0; i < itemSlots.Count; i++)
+        //    {
+        //        if (itemSlots[i].isCursorOver && Input.GetMouseButtonDown(1))
+        //        {
+        //            playerInventory.RemoveItem(itemSlots[i].ID);
+        //            ResetSlotUI(itemSlots[i]);
 
-                    break;
-                }
-            }
-        }
+        //            break;
+        //        }
+        //    }
+        //}
     }
 
     public void ResetSlotUI(Slot newSlot)
