@@ -8,10 +8,10 @@ public class Item : MonoBehaviour
     [Header("References")]
 
     [SerializeField] private int ID;
+    [SerializeField] private Sprite image;
 
-    //TODO: Implemenet the item description and item name.
-    //[SerializeField] private TextMeshProUGUI description;
-    //[SerializeField] private TextMeshProUGUI name;
+    [SerializeField] private string _name;
+    [SerializeField] private string description;
 
     [Header("Values")]
     [SerializeField] private bool canPickUp;
@@ -23,6 +23,10 @@ public class Item : MonoBehaviour
         newItem = GameManager.Instance.itemMananger.GetRandomItem();
 
         ID = newItem.ID;
+        image = newItem.image;
+        description = newItem.description;
+        _name = newItem.name;
+
         canPickUp = false;
     }
 

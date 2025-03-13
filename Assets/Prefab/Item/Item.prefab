@@ -96,6 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
+  image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  description: None
+  name: None
   canPickUp: 0
 --- !u!1 &6153508288050076170
 GameObject:
@@ -195,6 +198,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
+  image: {fileID: 0}
+  description: 
+  name: 
   canPickUp: 0
 --- !u!95 &261662070658924204
 Animator:

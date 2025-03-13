@@ -1,12 +1,17 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New item", menuName = "Item")]
 public class ItemSO : ScriptableObject
 {
+    [Header("References")]
+    public Sprite image;
+
+    [Header("Values")]
     public int ID;
 
-    [Header("Item description")]
-    public string Name;
+    [Header("Description")]
+    public string name;
 
-    public string Description;
+    public string description;
 }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41d10256596d68049bdb334222a68c88, type: 3}
-  m_Name: Weapon
+  m_Name: Shield
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 7b8d9f76067b1274e8d141c70d7df258, type: 3}
-  ID: 2
-  name: Weapon
-  description: Created by ancient gods
+  image: {fileID: 21300000, guid: 4b03a29a67fba9842b8e312c50b4ee49, type: 3}
+  ID: 4
+  name: Shield
+  description: Protects from any damage

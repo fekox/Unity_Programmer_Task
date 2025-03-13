@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d10256596d68049bdb334222a68c88, type: 3}
   m_Name: Coin
   m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: beebf256c61d95247a133fe35151eefa, type: 3}
   ID: 0
-  Name: Coin
-  Description: A gold coin, can be used to buy things
+  name: Coin
+  description: It is used to buy objects
