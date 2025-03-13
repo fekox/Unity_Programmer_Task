@@ -97,8 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  _name: 
   description: None
-  name: None
   canPickUp: 0
 --- !u!1 &6153508288050076170
 GameObject:
@@ -111,7 +111,6 @@ GameObject:
   - component: {fileID: 8328995104187331029}
   - component: {fileID: 7037209788721107697}
   - component: {fileID: 7280499366270206452}
-  - component: {fileID: 3442058823005363278}
   - component: {fileID: 261662070658924204}
   m_Layer: 0
   m_Name: Mesh
@@ -185,23 +184,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3442058823005363278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6153508288050076170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84387e7e933391f42928d3d0cc881227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 0
-  image: {fileID: 0}
-  description: 
-  name: 
-  canPickUp: 0
 --- !u!95 &261662070658924204
 Animator:
   serializedVersion: 5

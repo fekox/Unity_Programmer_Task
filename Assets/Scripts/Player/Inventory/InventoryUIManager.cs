@@ -10,14 +10,11 @@ public class InventoryUIManager : MonoBehaviour
     [SerializeField] private PlayerInventory playerInventory;
 
     [Header("Default Data")]
-    [SerializeField] private int defaultID;
     [SerializeField] private Sprite defaultImage;
-    [SerializeField] private string defaultName;
-    [SerializeField] private string defaultDescription;
 
     private List<ItemSO> inventory;
 
-    private int usableslots = 4;
+    private int maxItemsToUse = 4;
 
     public void UpdateInventoryUI() 
     {
@@ -31,8 +28,8 @@ public class InventoryUIManager : MonoBehaviour
             {
                 itemSlots[i].ID = inventory[i].ID;
                 itemSlots[i].image.sprite = inventory[i].image;
-                itemSlots[i]._name.text = inventory[i]._name;
-                itemSlots[i].description.text = inventory[i].description;
+                itemSlots[i]._name = inventory[i].name;
+                itemSlots[i].description = inventory[i].description;
                 itemSlots[i].isEmpty = false;
             }
         }
@@ -58,18 +55,14 @@ public class InventoryUIManager : MonoBehaviour
     public void ResetSlotUI(Slot newSlot)
     {
         newSlot.image.sprite = defaultImage;
-        newSlot._name.text = defaultName;
-        newSlot.description.text = defaultDescription;
         newSlot.isEmpty = true;
     }
 
     public void ResetAllSlotsUI() 
     {
-        for(int i = 0;i < usableslots; i++) 
+        for(int i = 0;i < maxItemsToUse; i++) 
         {
             itemSlots[i].image.sprite = defaultImage;
-            itemSlots[i]._name.text = defaultName;
-            itemSlots[i].description.text = defaultDescription;
             itemSlots[i].isEmpty = true;
         }
     }
