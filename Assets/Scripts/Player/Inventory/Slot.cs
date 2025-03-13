@@ -23,6 +23,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (!isEmpty)
         {
             isCursorOver = true;
+            descriptionSign.transform.position = Input.mousePosition;
             descriptionSign.SetActive(true);
         }
     }
