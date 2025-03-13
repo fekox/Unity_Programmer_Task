@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryUIManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private List<Slot> itemSlots;
