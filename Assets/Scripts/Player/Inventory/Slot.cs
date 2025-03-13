@@ -7,24 +7,29 @@ using UnityEngine.UI;
 
 public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public GameObject descriptionSign;
+
+    [Header("Values")]
+    public bool isEmpty = true;
+    public bool isCursorOver = false;
+
+    public int ID;
     public Image image;
     public TextMeshProUGUI _name;
     public TextMeshProUGUI description;
-
-    public GameObject descriptionSign;
-
-    public bool isEmpty = true;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!isEmpty)
         {
+            isCursorOver = true;
             descriptionSign.SetActive(true);
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        isCursorOver = false;
         descriptionSign.SetActive(false);
     }
 }

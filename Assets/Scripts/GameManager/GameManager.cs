@@ -44,5 +44,6 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         playerInventory.ShowInventoryLogic();
+        inventoryManager.RemoveItemFromInventoryLogic();
     }
 }

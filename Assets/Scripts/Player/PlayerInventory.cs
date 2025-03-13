@@ -7,12 +7,13 @@ public class PlayerInventory : MonoBehaviour
     [Header("References")]
     [SerializeField] private List<ItemSO> inventory;
     [SerializeField] private ItemManager itemManager;
-    [SerializeField] private GameObject playerInventory;
 
     private List<ItemSO> allItems;
 
     private bool isInventoryFull = false;
     private bool showInventory = false;
+
+    public GameObject playerInventoryUI;
 
     [Header("Values")]
     [SerializeField] private int maxInventorySize;
@@ -47,7 +48,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void RemoveItem(int ID) 
     {
-        if (inventory.Count < 0) 
+        if (inventory.Count > 0) 
         {
             for (int i = 0; i < inventory.Count; i++)
             {
@@ -70,7 +71,7 @@ public class PlayerInventory : MonoBehaviour
         {
             showInventory = !showInventory;
 
-            playerInventory.SetActive(showInventory);
+            playerInventoryUI.SetActive(showInventory);
         }
 
         if (showInventory == true)
