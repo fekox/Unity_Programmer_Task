@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: 62002270cafe98a48a5476e55b39da1a, type: 3}
   ID: 5
-  name: Ring
+  _name: Ring
   description: Makes you invisible

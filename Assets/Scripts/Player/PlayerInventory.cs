@@ -85,4 +85,9 @@ public class PlayerInventory : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
+
+    public List<ItemSO> GetInventory() 
+    {
+        return inventory;
+    }
 }

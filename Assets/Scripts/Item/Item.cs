@@ -35,6 +35,7 @@ public class Item : MonoBehaviour
         if (canPickUp && Input.GetKeyDown(KeyCode.E) && !GameManager.Instance.playerInventory.GetIsInventoryFull())
         {
             GameManager.Instance.playerInventory.AddItem(ID);
+            GameManager.Instance.inventoryManager.UpdateInventory();
             canPickUp = false;
             GameManager.Instance.pickUpText.SetActive(canPickUp);
             Destroy(gameObject);

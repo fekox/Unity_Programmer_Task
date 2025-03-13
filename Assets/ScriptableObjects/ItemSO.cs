@@ -11,7 +11,7 @@ public class ItemSO : ScriptableObject
     public int ID;
 
     [Header("Description")]
-    public string name;
+    public string _name;
 
     public string description;
 }

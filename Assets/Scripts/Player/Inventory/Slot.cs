@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
-    [SerializeField] private Image image;
-    [SerializeField] private TextMeshProUGUI _name;
-    [SerializeField] private TextMeshProUGUI description;
+    public Image image;
+    public TextMeshProUGUI _name;
+    public TextMeshProUGUI description;
 
-
+    public bool isEmpty = true;
 }

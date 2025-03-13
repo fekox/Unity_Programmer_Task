@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: 4b03a29a67fba9842b8e312c50b4ee49, type: 3}
   ID: 4
-  name: Shield
+  _name: Shield
   description: Protects from any damage

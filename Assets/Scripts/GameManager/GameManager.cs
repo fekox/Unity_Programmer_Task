@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public PlayerInventory playerInventory;
     public ItemManager itemMananger;
     public GameObject pickUpText;
+    public InventoryManager inventoryManager;
 
     [Header("Values")]
     public static GameManager Instance;
