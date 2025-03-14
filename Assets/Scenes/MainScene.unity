@@ -3446,7 +3446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 1494096335}
-  controlsSign: {fileID: 0}
+  controlsSign: {fileID: 1342987370}
 --- !u!1 &722252472
 GameObject:
   m_ObjectHideFlags: 0
@@ -9830,7 +9830,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 715942944}
         m_TargetAssemblyTypeName: ButtonsManager, Assembly-CSharp
-        m_MethodName: HideControllsSign
+        m_MethodName: HideControlsSign
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
