@@ -14,7 +14,7 @@ public class InventoryUIManager : MonoBehaviour
 
     private List<ItemSO> inventory;
 
-    private int maxItemsToUse = 4;
+    private int maxItemsToCarry = 4;
 
     public void UpdateInventoryUI() 
     {
@@ -35,23 +35,6 @@ public class InventoryUIManager : MonoBehaviour
         }
     }
 
-    public void RemoveItemFromInventoryLogic() 
-    {
-        //if (playerInventory.playerInventoryUI.activeInHierarchy) 
-        //{
-        //    for (int i = 0; i < itemSlots.Count; i++)
-        //    {
-        //        if (itemSlots[i].isCursorOver && Input.GetMouseButtonDown(1))
-        //        {
-        //            playerInventory.RemoveItem(itemSlots[i].ID);
-        //            ResetSlotUI(itemSlots[i]);
-
-        //            break;
-        //        }
-        //    }
-        //}
-    }
-
     public void ResetSlotUI(Slot newSlot)
     {
         newSlot.image.sprite = defaultImage;
@@ -60,7 +43,7 @@ public class InventoryUIManager : MonoBehaviour
 
     public void ResetAllSlotsUI() 
     {
-        for(int i = 0;i < maxItemsToUse; i++) 
+        for(int i = 0;i < maxItemsToCarry; i++) 
         {
             itemSlots[i].image.sprite = defaultImage;
             itemSlots[i].isEmpty = true;

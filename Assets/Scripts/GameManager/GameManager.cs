@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public PlayerInventory playerInventory;
     public ItemManager itemMananger;
     public GameObject pickUpText;
+    public GameObject inventoryFullText;
     public InventoryUIManager inventoryUIManager;
 
     [Header("Values")]
@@ -44,6 +45,5 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         playerInventory.ShowInventoryLogic();
-        inventoryUIManager.RemoveItemFromInventoryLogic();
     }
 }

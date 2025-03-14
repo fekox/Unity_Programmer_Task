@@ -8,6 +8,8 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private List<ItemSO> inventory;
     [SerializeField] private ItemManager itemManager;
 
+    [SerializeField] private InventoryUIManager inventoryUIManager;
+
     private List<ItemSO> allItems;
 
     private bool isInventoryFull = false;
@@ -20,13 +22,20 @@ public class PlayerInventory : MonoBehaviour
 
     void Start()
     {
-        inventory = new List<ItemSO>();
 
         allItems = itemManager.GetAllItemsList();
+
+        CheckSaveInventory();
     }
 
     public void AddItem(int id) 
     {
+        if (inventory.Count >= maxInventorySize)
+        {
+            isInventoryFull = true;
+            return;
+        }
+
         if (inventory.Count < maxInventorySize)
         {
             isInventoryFull = false;
@@ -38,11 +47,6 @@ public class PlayerInventory : MonoBehaviour
                     inventory.Add(allItems[i]);
                 }
             }
-        }
-
-        if (inventory.Count >= maxInventorySize)
-        {
-            isInventoryFull = true;
         }
     }
 
@@ -90,5 +94,28 @@ public class PlayerInventory : MonoBehaviour
     public List<ItemSO> GetInventory() 
     {
         return inventory;
+    }
+
+    public void CheckSaveInventory() 
+    {
+        InventoryData savedData = SaveSystem.LoadInventory();
+        inventory.Clear();
+
+        foreach (int ID in savedData.itemsID)
+        {
+            ItemSO item = allItems.Find(i => i.ID == ID);
+
+            if (item != null)
+            {
+                inventory.Add(item);
+            }
+        }
+
+        inventoryUIManager.UpdateInventoryUI();
+    }
+
+    void OnApplicationQuit()
+    {
+        SaveSystem.SaveInventory(this);
     }
 }

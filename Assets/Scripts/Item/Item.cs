@@ -38,7 +38,11 @@ public class Item : MonoBehaviour
             GameManager.Instance.inventoryUIManager.UpdateInventoryUI();
             canPickUp = false;
             GameManager.Instance.pickUpText.SetActive(canPickUp);
-            Destroy(gameObject);
+
+            if (!GameManager.Instance.playerInventory.GetIsInventoryFull()) 
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -49,7 +53,16 @@ public class Item : MonoBehaviour
             if (GameManager.Instance != null)
             {
                 canPickUp = true;
-                GameManager.Instance.pickUpText.SetActive(canPickUp);
+
+                if (!GameManager.Instance.playerInventory.GetIsInventoryFull())
+                {
+                    GameManager.Instance.pickUpText.SetActive(canPickUp);
+                }
+
+                else 
+                {
+                    GameManager.Instance.inventoryFullText.SetActive(canPickUp);
+                }
             }
         }
     }
@@ -62,6 +75,7 @@ public class Item : MonoBehaviour
             {
                 canPickUp = false;
                 GameManager.Instance.pickUpText.SetActive(canPickUp);
+                GameManager.Instance.inventoryFullText.SetActive(canPickUp);
             }
         }
     }
