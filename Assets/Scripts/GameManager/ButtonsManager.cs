@@ -12,7 +12,7 @@ public class ButtonsManager : MonoBehaviour
     public void RestartGame()
     {
         SaveSystem.SaveInventory(playerInventory);
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(0);
     }
 
     public void HideControllsSign() 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public static class SaveSystem 
 {
-    private static string path = Application.dataPath + "/Saves/inventory.json";
+    private static string path = Path.Combine(Application.persistentDataPath, "inventory.json");
 
     public static void SaveInventory(PlayerInventory inventory) 
     {
