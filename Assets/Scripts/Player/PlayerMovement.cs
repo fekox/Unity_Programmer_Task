@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// It manages the logic for the player's movement
+/// </summary>
 public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
@@ -10,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Values")]
     [SerializeField] private float speed;
 
+    /// <summary>
+    /// It executes the player's movement logic
+    /// </summary>
     public void MovementLogic() 
     {
         float x = Input.GetAxis("Horizontal");

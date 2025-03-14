@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// It handles the logic for the player's view
+/// </summary>
 public class PlayerLook : MonoBehaviour
 {
     [Header("References")]
@@ -12,6 +15,9 @@ public class PlayerLook : MonoBehaviour
 
     private float xRotation;
 
+    /// <summary>
+    /// It executes the logic for the player's vision
+    /// </summary>
     public void LookLogic()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensivility * Time.deltaTime;

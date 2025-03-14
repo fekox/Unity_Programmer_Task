@@ -3446,7 +3446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 1494096335}
-  controllsSign: {fileID: 1342987370}
+  controlsSign: {fileID: 0}
 --- !u!1 &722252472
 GameObject:
   m_ObjectHideFlags: 0
@@ -6189,7 +6189,7 @@ GameObject:
   - component: {fileID: 1342987373}
   - component: {fileID: 1342987372}
   m_Layer: 5
-  m_Name: ControllsSign
+  m_Name: ControlsSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

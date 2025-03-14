@@ -7,6 +7,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.Playables;
 using UnityEngine.UI;
 
+/// <summary>
+///  Handles all the methods that control the item's logic with respect to the mouse
+/// </summary>
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("References")]
@@ -23,6 +26,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [HideInInspector] public Transform parent;
     public Image image;
 
+    /// <summary>
+    /// When starting to drag the item, if that slot is not empty, it sets the item's parent and disables the item's raycast target
+    /// </summary>
+    /// <param name="eventData">Mouse input</param>
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (!slot.isEmpty)
@@ -34,6 +41,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
+    /// <summary>
+    /// if the slot is not empty, disable the game object descriptionSign and set the object's position to the mouse position
+    /// </summary>
+    /// <param name="eventData">Mouse input</param>
     public void OnDrag(PointerEventData eventData)
     {
         if (!slot.isEmpty) 
@@ -43,6 +54,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
+    /// <summary>
+    /// if the slot is empty, set that slot as its new parent and enable the item's raycast target
+    /// </summary>
+    /// <param name="eventData">Mouse input</param>
     public void OnEndDrag(PointerEventData eventData)
     {
         if (!slot.isEmpty)
@@ -52,6 +67,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
+    /// <summary>
+    /// If the slot is empty, set the item's name and description on the item description sign to then enable it
+    /// </summary>
+    /// <param name="eventData">Mouse input</param>
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!slot.isEmpty)
@@ -63,12 +82,19 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
+    /// <summary>
+    /// Disable the item description sign
+    /// </summary>
+    /// <param name="eventData">Mouse input</param>
     public void OnPointerExit(PointerEventData eventData)
     {
         slot.isCursorOver = false;
         descriptionSign.SetActive(false);
     }
 
+    /// <summary>
+    /// If the cursor is over the item and press the right mouse button, remove the item from the inventory and the UI
+    /// </summary>
     private void Update()
     {
         if (slot.isCursorOver && Input.GetMouseButtonDown(1))

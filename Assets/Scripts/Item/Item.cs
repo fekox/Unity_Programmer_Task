@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Sets the item's attributes and checks its collision with the player
+/// </summary>
 public class Item : MonoBehaviour
 {
     [Header("References")]
@@ -18,6 +21,9 @@ public class Item : MonoBehaviour
 
     private ItemSO newItem;
 
+    /// <summary>
+    /// Generates a random item and sets its attributes
+    /// </summary>
     private void Start()
     {
         newItem = GameManager.Instance.itemMananger.GetRandomItem();
@@ -30,6 +36,9 @@ public class Item : MonoBehaviour
         canPickUp = false;
     }
 
+    /// <summary>
+    /// If the player can grab the item, it is saved in their inventory and then the prefab is destroyed
+    /// </summary>
     private void Update()
     {
         if (canPickUp && Input.GetKeyDown(KeyCode.E) && !GameManager.Instance.playerInventory.GetIsInventoryFull())
@@ -46,6 +55,10 @@ public class Item : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If the player collides with the item, the pickUpText game object is enabled
+    /// </summary>
+    /// <param name="other">The player</param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) 
@@ -67,6 +80,10 @@ public class Item : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If the player stops colliding with the item, the pickUpText and inventoryFullText game objects are disabled
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))

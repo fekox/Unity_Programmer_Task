@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// It contains the data of the slot
+/// </summary>
 public class Slot : MonoBehaviour, IDropHandler
 {
     [Header("Values")]
@@ -16,6 +19,10 @@ public class Slot : MonoBehaviour, IDropHandler
     public string _name;
     public string description;
 
+    /// <summary>
+    /// Drop the item into a new slot as long as it doesn't already contain an item
+    /// </summary>
+    /// <param name="eventData">The mouse input</param>
     public void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0)
