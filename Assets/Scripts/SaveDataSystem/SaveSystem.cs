@@ -41,5 +41,3 @@ public static class SaveSystem
         return new InventoryData();
     }
 }
-    
-
