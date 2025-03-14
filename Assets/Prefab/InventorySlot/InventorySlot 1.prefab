@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 89cd0b826df89254695514558c885bc2, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.84769297, b: 0.4943396, a: 1}
+    m_HighlightedColor: {r: 0.81509435, g: 0.5459097, b: 0.2429904, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -135,13 +135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a715a6633e041b42bebda57dc834898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionSign: {fileID: 0}
   isEmpty: 1
   isCursorOver: 0
   ID: 0
   image: {fileID: 3997534024055150885}
-  _name: {fileID: 0}
-  description: {fileID: 0}
+  _name: 
+  description: 
 --- !u!114 &3468160840470072220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,5 +255,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slot: {fileID: 5775191932594315152}
   descriptionSign: {fileID: 0}
+  signName: {fileID: 0}
+  signDescription: {fileID: 0}
+  playerInventory: {fileID: 0}
+  inventoryUIManager: {fileID: 0}
   parent: {fileID: 0}
   image: {fileID: 3997534024055150885}

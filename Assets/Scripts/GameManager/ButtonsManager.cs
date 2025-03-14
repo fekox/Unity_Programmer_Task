@@ -7,10 +7,17 @@ public class ButtonsManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private PlayerInventory playerInventory;
+
+    [SerializeField] private GameObject controllsSign;
     public void RestartGame()
     {
         SaveSystem.SaveInventory(playerInventory);
         SceneManager.LoadScene("MainScene");
+    }
+
+    public void HideControllsSign() 
+    {
+        controllsSign.SetActive(false);
     }
 
     public void QuitGame() 
